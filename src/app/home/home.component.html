@@ -1,4 +1,10 @@
 <h2>Home Page</h2>
-<app-post-preview></app-post-preview>
-<app-post-preview></app-post-preview>
-<app-post-preview></app-post-preview>
+<div *ngFor="let post of blogPosts">
+    <div *ngIf="post.published">
+        <h3 >
+            {{post.title}}
+        </h3>
+        <p>{{post.description}}</p>
+        <p>Posted {{post.date_created}}</p>
+    </div>
+</div>

@@ -1,8 +1,12 @@
-# TinyBlogger
-
-![Initial Tiny-Blogger Homepage](./screenshots/tiny-blogger-home.png?raw=true)
+# TinyBlogger - A Simple Blog CMS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+
+Homepage - View shortened descriptions of published articles
+![Tiny-Blogger Homepage](./screenshots/home.png?raw=true)
+
+Dashboard - Create, Update, Delete, and Publish blog articles
+![Tiny-Blogger Dashboard](./screenshots/dashboard.png?raw=true)
 
 ## Development server
 
