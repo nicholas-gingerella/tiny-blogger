@@ -8,7 +8,7 @@ import { BlogPost } from './blog_post';
   providedIn: 'root'
 })
 export class BlogPostService {
-  private blogPostsUrl = 'api/articles';
+  private blogPostsUrl = 'api/posts';
   private httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
@@ -21,6 +21,13 @@ export class BlogPostService {
     return this.http.get<BlogPost[]>(this.blogPostsUrl).pipe(
       catchError(this.handleError<BlogPost[]>('getBlogPosts', []))
     );
+  }
+
+  getBlogPost(): Observable<BlogPost> {
+    return this.http.get<BlogPost>(this.blogPostsUrl);
+    // return this.http.get<BlogPost>(this.blogPostUrl).pipe(
+    //   catchError(this.handleError<BlogPost>('getBlogPost',{}))
+    // );
   }
 
   /**

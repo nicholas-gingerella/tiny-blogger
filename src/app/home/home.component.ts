@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private blogPostService: BlogPostService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getBlogPosts();

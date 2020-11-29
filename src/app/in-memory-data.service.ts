@@ -7,7 +7,7 @@ import { BlogPost } from './blog_post';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const articles = [
+    const posts = [
       {
         id: 11,
         title: 'In the Beginning, there was a Segmentation Fault',
@@ -49,7 +49,7 @@ export class InMemoryDataService implements InMemoryDbService {
         published: false
       },
     ];
-    return {articles};
+    return {posts};
   }
 
   // Overrides the genId method to ensure that a post always has an id.

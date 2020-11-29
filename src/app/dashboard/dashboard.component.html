@@ -1,10 +1,11 @@
 <h2>Blog Dashboard</h2>
+<a routerLink="/add-post" routerLinkActive="active">Create Post</a>
 <div *ngFor="let post of blogPosts">
         <h3 >
             ID {{post.id}}: {{post.title}}
         </h3>
         <h4 *ngIf="post.published == false">(Not Published)</h4>
-        <button *ngIf="post.published == false">Publish</button>
-        <button>Modify</button>
-        <button>Delete</button>
+        <a *ngIf="post.published == false">Publish</a>
+        <a routerLink="/modify-post" routerLinkActive="active">Modify</a>
+        <a>Delete</a>
 </div>

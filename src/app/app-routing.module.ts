@@ -3,11 +3,17 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { AddPostComponent } from './add-post/add-post.component';
+import { ModifyPostComponent } from './modify-post/modify-post.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 const routes: Routes = [
-  { path: 'Home', component: HomeComponent },
-  { path: 'Dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/Home', pathMatch: 'full'}
+  { path: 'home', component: HomeComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'blog-post', component: BlogPostComponent },
+  { path: 'add-post', component: AddPostComponent },
+  { path: 'modify-post', component: ModifyPostComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full'}
 
 ];
 
