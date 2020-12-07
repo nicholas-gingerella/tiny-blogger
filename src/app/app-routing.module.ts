@@ -10,7 +10,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'blog-post', component: BlogPostComponent },
+  { path: 'blog-post/:id', component: BlogPostComponent },
   { path: 'add-post', component: AddPostComponent },
   { path: 'modify-post', component: ModifyPostComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full'}

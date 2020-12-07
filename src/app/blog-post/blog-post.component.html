@@ -1,1 +1,17 @@
-<p>blog-post works!</p>
+<div *ngIf="blogPost; else elseBlock">
+    <h2>{{blogPost.title}}</h2>
+    <p>Created {{blogPost.date_created}}</p>
+    <p *ngIf="blogPost.date_modified">
+        Last Update: {{blogPost.date_modified}}
+    </p>
+    <p>Tags:</p>
+    <ul *ngIf="blogPost.tags">
+        <li *ngFor="let tag of blogPost.tags">
+            {{tag}}
+        </li>
+    </ul>
+    <p>{{blogPost.content}}</p>
+</div>
+<ng-template #elseBlock>
+    <p>OOPS! That post doesn't seem to exist</p>
+</ng-template>

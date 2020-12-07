@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
         content: 'Web development is hard. Half the trouble is just choosing what framework to start with!',
         tags: ['javascript', 'angular', 'react', 'web frameworks'],
         date_created: '11-27-20',
-        date_modified: '',
+        date_modified: '12-4-20',
         published: true
       },
       {

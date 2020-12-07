@@ -23,11 +23,12 @@ export class BlogPostService {
     );
   }
 
-  getBlogPost(): Observable<BlogPost> {
-    return this.http.get<BlogPost>(this.blogPostsUrl);
+  getBlogPost(id: number): Observable<BlogPost> {
+    const url = `${this.blogPostsUrl}/${id}`;
+    return this.http.get<BlogPost>(url);
     // return this.http.get<BlogPost>(this.blogPostUrl).pipe(
     //   catchError(this.handleError<BlogPost>('getBlogPost',{}))
-    // );
+    // )
   }
 
   /**
