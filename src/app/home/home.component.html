@@ -5,7 +5,7 @@
             {{post.title}}
         </h3>
         <p>{{post.description}}</p>
-        <a routerLink="/blog-post/{{post.id}}" routerLinkActive="active">Read More</a>
+        <a routerLink="/post/{{post.id}}" routerLinkActive="active">Read More</a>
         <p>Posted {{post.date_created}}</p>
         <p *ngIf="post.date_modified">Last Update: {{post.date_modified}}</p>
     </div>

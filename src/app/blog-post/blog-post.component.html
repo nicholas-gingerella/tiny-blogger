@@ -1,4 +1,4 @@
-<div *ngIf="blogPost; else elseBlock">
+<div *ngIf="blogPost">
     <h2>{{blogPost.title}}</h2>
     <p>Created {{blogPost.date_created}}</p>
     <p *ngIf="blogPost.date_modified">
@@ -12,6 +12,3 @@
     </ul>
     <p>{{blogPost.content}}</p>
 </div>
-<ng-template #elseBlock>
-    <p>OOPS! That post doesn't seem to exist</p>
-</ng-template>
