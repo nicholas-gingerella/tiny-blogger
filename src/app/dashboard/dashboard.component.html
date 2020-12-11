@@ -6,9 +6,9 @@
         </h3>
         <h4 *ngIf="post.published == false">(Not Published)</h4>
         <a routerLink="/post/{{post.id}}/edit" routerLinkActive="active">Edit</a>
-        <a *ngIf="post.published == false; else elseBlock">Publish</a>
+        <a *ngIf="post.published == false; else elseBlock" routerLink="/post/{{post.id}}/publish">Publish</a>
         <ng-template #elseBlock>
-            <a>Unpublish</a>
+            <a routerLink="/post/{{post.id}}/unpublish">Unpublish</a>
         </ng-template>
         <a>Delete</a>
 </div>

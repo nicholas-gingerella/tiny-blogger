@@ -13,6 +13,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { UpdatePostComponent } from './update-post/update-post.component';
 import { ModifyPostComponent } from './modify-post/modify-post.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     AddPostComponent,
     UpdatePostComponent,
     ModifyPostComponent,
-    BlogPostComponent
+    BlogPostComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
