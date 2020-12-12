@@ -26,11 +26,17 @@ export class ModifyPostComponent implements OnInit {
 
 
   getBlogPost(): void {
-    this.BlogPostService.getBlogPost().subscribe(p => this.blogPost = p);
     const id = +this.route.snapshot.paramMap.get('id');
     this.BlogPostService.getBlogPost(id).subscribe(post => this.blogPost = post);
   }
 
-  //setBlogPost() ???
+  goBack(): void {
+    this.location.back();
+  }
+
+  savePost(): void {
+    this.BlogPostService.updateBlogPost(this.blogPost).subscribe(() => this.goBack());
+  }
+
 
 }

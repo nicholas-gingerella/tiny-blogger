@@ -31,6 +31,11 @@ export class BlogPostService {
     // )
   }
 
+  updateBlogPost(post: BlogPost): Observable<any> {
+    const url = `${this.blogPostsUrl}/${post.id}`
+    return this.http.put(url, post, this.httpOptions)
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.
